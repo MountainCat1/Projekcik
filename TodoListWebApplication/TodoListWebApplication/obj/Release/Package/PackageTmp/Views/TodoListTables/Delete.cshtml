@@ -1,0 +1,39 @@
+﻿@model TodoListWebApplication.Models.TodoListTable
+
+@{
+    ViewBag.Title = "Usuń";
+}
+
+<h2>Usuń</h2>
+
+<h3>Na pewno chcesz usunąć to zadanie?</h3>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Zadanie)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Zadanie)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Wykonane)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Wykonane)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Wróć", "Index")
+        </div>
+    }
+</div>

@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "mssql2": {
+      "resourceId": null,
+      "type": "mssql.onprem",
+      "connectionId": "sql_server",
+      "secretStore": "AzureAppSettings"
+    },
+    "mssql1": {
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Sql/servers/todolistwebapplicationdbserver/databases/TodoListWebApplication_db",
+      "type": "mssql.azure",
+      "connectionId": "sql_server",
+      "secretStore": "AzureAppSettings"
+    }
+  }
+}
